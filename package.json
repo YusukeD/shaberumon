@@ -1,0 +1,35 @@
+{
+  "name": "shaberumon",
+  "version": "0.0.1",
+  "description": "text to speech bot for discord.",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YusukeD/shaberumon.git"
+  },
+  "author": "YusukeD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YusukeD/shaberumon/issues"
+  },
+  "homepage": "https://github.com/YusukeD/shaberumon#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.16.1",
+    "axios": "^1.6.2",
+    "discord.js": "^14.7.1",
+    "libsodium-wrappers": "^0.7.13",
+    "mongodb": "^6.3.0"
+  }
+}
