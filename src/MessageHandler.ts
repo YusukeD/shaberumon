@@ -32,8 +32,12 @@ export class MessageHandler {
         if (!connection) {
             return
         }
-
-        const voice = await this.voiceVox.getVoice({ speaker: 1, text: message.content })
+        
+        let text = message.content
+        if (message.content.startsWith('http://') || message.content.startsWith('https://')) {
+            text = 'URL省略'
+        }
+        const voice = await this.voiceVox.getVoice({speaker: 1, text})
         const audioResource = createAudioResource(voice, {
             inputType: StreamType.Arbitrary,
         })
