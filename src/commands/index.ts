@@ -1,10 +1,10 @@
-import {ChatInputCommandInteraction, SlashCommandBuilder} from 'discord.js';
-import {Context} from '@/app/context.js';
+import { ChatInputCommandInteraction, SlashCommandBuilder } from 'discord.js'
+import { Context } from '@/app/context'
 
 export function createCommandList(commands: CommandInterface[]) {
     return commands.map(command => ({
         [command.getData().name]: command,
-    })).reduce((acc, value) => ({...acc, ...value}), {});
+    })).reduce((acc, value) => ({ ...acc, ...value }), {})
 }
 
 export interface CommandInterface {

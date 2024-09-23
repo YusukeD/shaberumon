@@ -1,4 +1,4 @@
-import {FollowUser} from '@/app/model/FollowUser.js';
+import { FollowUser } from '@/app/model/FollowUser'
 
 export type Context = {
     mainChannelId: string | null
@@ -8,4 +8,4 @@ export type Context = {
 export const context: Context = {
     mainChannelId: null,
     followUsers: [],
-};
+}
