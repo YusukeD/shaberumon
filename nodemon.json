@@ -6,8 +6,8 @@
     "node_modules"
   ],
   "watch": [
-    "src"
+    "src/"
   ],
-  "exec": "node --loader ./loader.js src/index.ts",
+  "exec": "node --enable-source-maps --import ./loader.js src/index.ts",
   "ext": "ts, js"
 }

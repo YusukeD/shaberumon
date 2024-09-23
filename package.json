@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/YusukeD/shaberumon#readme",
   "devDependencies": {
+    "@swc/core": "^1.7.26",
+    "@swc/helpers": "^0.5.13",
     "nodemon": "^3.0.1",
     "prettier": "^3.1.0",
     "ts-node": "^10.9.1",
