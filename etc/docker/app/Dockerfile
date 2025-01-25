@@ -1,13 +1,9 @@
-FROM node:20.17.0
+FROM node:23-alpine
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
+WORKDIR /app
 
 COPY . .
 
-COPY ./etc/docker/app/entrypoint.sh /usr/bin/entrypoint.sh
-RUN chmod 744 /usr/bin/entrypoint.sh
-CMD ["bash", "/usr/bin/entrypoint.sh"]
+RUN npm install
+
+CMD ["npm", "start"]
