@@ -11,6 +11,7 @@ import { FollowMeCommand } from '@/app/commands/FollowMeCommand'
 import { JoinCommand } from '@/app/commands/JoinCommand'
 import { envConfig } from '@/app/envConfig'
 import { VoiceVox } from '@/app/lib/VoiceVox'
+import express from 'express'
 
 
 (async () => {
@@ -48,4 +49,15 @@ import { VoiceVox } from '@/app/lib/VoiceVox'
     client.on('messageCreate', (message) => messageHandler.handle(message, context))
     client.on('interactionCreate', async (interaction: Interaction) => interactionCreateHandler.handle(interaction, context))
     client.on('voiceStateUpdate', (oldState, newState) => voiceStateUpdateHandler.handle(oldState, newState, context))
+
+    const app = express()
+    app.listen(3000, () => {
+        console.log('Express server listening on port 3000')
+    })
+
+    app.get('/', (_req, res) => {
+        res.json({
+            message: 'healthy',
+        })
+    })
 })()

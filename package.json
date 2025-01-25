@@ -21,6 +21,7 @@
   "devDependencies": {
     "@swc/core": "^1.7.26",
     "@swc/helpers": "^0.5.13",
+    "@types/express": "^5.0.0",
     "nodemon": "^3.0.1",
     "prettier": "^3.1.0",
     "ts-node": "^10.9.1",
@@ -31,6 +32,7 @@
     "@discordjs/voice": "^0.16.1",
     "axios": "^1.7.4",
     "discord.js": "^14.16.2",
+    "express": "^4.21.2",
     "libsodium-wrappers": "^0.7.13",
     "mongodb": "^6.3.0"
   }
