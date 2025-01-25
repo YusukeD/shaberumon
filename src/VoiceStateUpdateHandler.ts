@@ -12,7 +12,7 @@ export class VoiceStateUpdateHandler {
     }
 
     async handle(oldState: VoiceState, newState: VoiceState, context: Context): Promise<void> {
-        if (context.mainChannelId === oldState.channelId && oldState.channel?.members.size === 1) {
+        if (oldState.channel?.members.size === 1) {
             const connection = getVoiceConnection(oldState.guild.id)
             connection?.disconnect()
         }
